@@ -1,0 +1,21 @@
+/**
+ *  UI Objects Framework - Header
+ */
+
+.header-main {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Media query */
+@include min-screen($mq_sm)  {
+
+	.header-main {
+		text-align: left;
+
+		    .header-right {
+		    	margin-top: 10px;
+		    }
+	}
+
+}

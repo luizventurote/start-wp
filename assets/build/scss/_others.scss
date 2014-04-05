@@ -1,0 +1,120 @@
+/**
+ *  UI Objects Framework - Others styles
+ */
+
+.donate {
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: #555;
+
+	&:hover {
+		text-decoration: none;
+		color: #555;
+	}
+}
+
+.translate {
+	text-align: right;
+	display: block;
+	color: #dedede;
+
+	a {
+		text-decoration: none;
+		color: #555;
+
+		&:hover {
+			text-decoration: none;
+			color: #555;
+		}
+	}
+
+	.lg {
+		display: none;
+	}
+
+	/* Media query */
+	@include min-screen(500px)  {
+
+		.lg {
+			display: inline-block;
+		}
+
+	}
+}
+
+.sprite {
+	display: inline-block;
+	background: url('../img/sprite.png') no-repeat;
+}
+
+.paypal {
+	width: 37px;
+	height: 11px;
+	top: 3px;
+	position: relative;
+	background-position: -1px -2px;
+
+	@extend .sprite;
+}
+
+.flag-en {
+	width: 16px;
+	height: 11px;
+	top: 1px;
+	margin: 0 2px 0 2px;
+	position: relative;
+	background-position: -41px -2px;
+
+	@extend .sprite;
+}
+
+.flag-pt-br {
+	width: 16px;
+	height: 11px;
+	top: 1px;
+	margin-left: 2px;
+	position: relative;
+	background-position: -60px -2px;
+
+	@extend .sprite;
+}
+
+/* Media query */
+@include hdpi()  {
+
+	.paypal {
+		background-size: 100% 100%;
+		background-position: 0 0;
+		background-image: url('../img/paypal@2x.png');
+	}
+
+}
+
+/* Logo footer */
+.footer-1 {
+
+	.logo {
+		margin: 0 auto 10px ;
+		display: block;
+	}
+
+	@include min-screen($mq_sm) {
+
+		.logo {
+			width: 150px;
+			height: 60px;
+			display: inline-block;
+		}
+
+	}
+
+	@include min-screen($mq_md) {
+
+		.logo {
+			width: 203px;
+			height: 81px;
+		}
+
+	}
+}
